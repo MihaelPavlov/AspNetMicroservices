@@ -1,0 +1,10 @@
+﻿namespace Ordering.Application.Contracts.Infrastructure
+{
+    using Ordering.Application.Models;
+    using System.Threading.Tasks;
+
+    public interface IEmailService
+    {
+        Task<bool> SendEmail(Email email);
+    }
+}
