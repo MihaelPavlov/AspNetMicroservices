@@ -18,6 +18,31 @@ Architecture:
 	- Ordering.Infrastructure Layer
 ..............................
 
+Microservices Async Communication with RabbitMQ & MassTransit for Checkout Order Between Basket-Ordering Microservices
+We have RabbitMQ connection on Basket and Ordering Microservices for producing and consuming events
+Basket Microservice includes Publish BasketCheckout Queue, and Ordering Microservice is consuming that queue
+
+When we create CheckoutCommand(which is coming from client application)
+After this we removing for example the basket from Redis database
+And after this Basket Microservice publish Checkout Event to the queue.
+
+And the Subcriber microservices will consume this event and create a order in sqlServer database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 DIP (Dependency Inversion Principles)
 
 Without Dependency Inversion -> Business Logic(Upper Level Layer) using(depend) the Data Access(Lower Level Layer)
@@ -94,3 +119,7 @@ Writing models on the CQRS Design pattern
 Final state of our existence
 Event information generated as a result
 Triggered and out reading model
+
+....................................
+
+Microservices Communication Types
