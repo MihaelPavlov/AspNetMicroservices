@@ -10,6 +10,7 @@
     using ValidationException = Ordering.Application.Exceptions.ValidationException;
 
     public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+        where TRequest : MediatR.IRequest<TResponse> //Why we specify the TRequest -> https://github.com/jbogard/MediatR/wiki/Migration-Guide-9.x-to-10.0
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
 
