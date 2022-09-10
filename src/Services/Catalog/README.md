@@ -1,4 +1,4 @@
-Catalog API 
+# Catalog API 
 
 ASP.NET Core Web API application
 GRUD Operations,
@@ -8,6 +8,6 @@ Containerize Catalog Microservices with MongoDB using Docker Compose
 
 Architecture: 
 
-	- Data Access Layer
-	- Business Logic Layer
-	- Presentation Layer
+	Data Access Layer
+	Business Logic Layer
+	Presentation Layer
