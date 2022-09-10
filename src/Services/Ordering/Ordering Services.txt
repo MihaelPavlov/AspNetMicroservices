@@ -70,6 +70,10 @@ Query - QueryHandlers
 
 .................................
 
+MediatR
+MediatR Requests are very simple request-response style messages, where a single request is synchronously handled by a single handler (synchronous from the request point of view, not C# internal async/await).
+
+.................................
 Eventual Consistent
 
 Inconsistent for a while 
